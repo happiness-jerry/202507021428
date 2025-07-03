@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马诺河联盟道路项目招标文件 | 利比里亚公共工程部</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a3a5f;
+            --secondary: #2c5a8a;
+            --accent: #e67e22;
+            --light: #f5f7fa;
+            --dark: #0d1f33;
+            --success: #27ae60;
+            --warning: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f0f4f9 0%, #e2e9f1 100%);
+            color: #333;
+            line-height: 1.7;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(110deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 40px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+        
+        .logo-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        
+        .logo-text p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+        
+        .deadline-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            min-width: 280px;
+            text-align: center;
+        }
+        
+        .deadline-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .deadline-box p {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .project-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .overview-card {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .overview-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .overview-card p {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        /* 主内容区样式 */
+        .main-content {
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(90deg, #f0f4f9 0%, #e4edf5 100%);
+            padding: 25px 30px;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-header h2 i {
+            color: var(--secondary);
+            background: #e4edf5;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-body {
+            padding: 30px;
+        }
+        
+        .sub-section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #e1e8f0;
+        }
+        
+        .sub-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .sub-section h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sub-section h3 i {
+            color: var(--accent);
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .info-card {
+            background: #f8fafd;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #e1e8f0;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: var(--secondary);
+        }
+        
+        .info-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card ul {
+            padding-left: 25px;
+        }
+        
+        .info-card li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .info-card li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e4f0fa 0%, #d5e6f7 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .data-table th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .data-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: #f8fafd;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .requirement-card {
+            background: #f8fafd;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #e1e8f0;
+            position: relative;
+        }
+        
+        .requirement-card h4 {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .requirement-card h4 i {
+            color: var(--accent);
+        }
+        
+        .requirement-card ul {
+            padding-left: 25px;
+        }
+        
+        .requirement-card li {
+            margin-bottom: 8px;
+        }
+        
+        .requirement-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .core-logic-box {
+            background: linear-gradient(135deg, #e6f7ee 0%, #d4f2e4 100%);
+            border-left: 4px solid var(--success);
+            padding: 30px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 40px;
+        }
+        
+        .core-logic-box h3 {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .core-logic-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 32px;
+            color: white;
+        }
+        
+        .footer-logo p {
+            font-size: 1.1rem;
+        }
+        
+        .footer-text {
+            max-width: 800px;
+            margin: 30px auto 0;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 900px) {
+            .header-top {
+                flex-direction: column;
+                gap: 25px;
+                align-items: flex-start;
+            }
+            
+            .deadline-box {
+                width: 100%;
+            }
+            
+            .project-overview {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header, .main-content {
+                padding: 30px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section-body {
+                padding: 20px;
+            }
+            
+            .footer-logos {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="logo-section">
+                        <div class="logo-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>马诺河联盟道路发展与运输便利化计划</h1>
+                            <p>第三阶段：Kelipo-Putuken-John Davis Town 61.5公里道路铺设项目</p>
+                        </div>
+                    </div>
+                    <div class="deadline-box">
+                        <h3><i class="fas fa-hourglass-half"></i> 投标截止时间</h3>
+                        <p>2025年7月31日 15:00 (格林尼治标准时间)</p>
+                    </div>
+                </div>
+                
+                <div class="project-overview">
+                    <div class="overview-card">
+                        <h3>雇主</h3>
+                        <p>利比里亚公共工程部</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>资金来源</h3>
+                        <p>非洲开发银行 (AfDB)</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>合同期限</h3>
+                        <p>48个月</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>项目地点</h3>
+                        <p>River Gee县和Grand Gedeh县</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <!-- 文件总结部分 -->
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-alt"></i> 1 文件总结</h2>
+                </div>
+                <div class="section-body">
+                    <div class="sub-section">
+                        <h3><i class="fas fa-info-circle"></i> 1.1 基础信息与说明</h3>
+                        <div class="content-grid">
+                            <div class="info-card">
+                                <h4>项目核心信息</h4>
+                                <ul>
+                                    <li><strong>雇主：</strong>利比里亚公共工程部</li>
+                                    <li><strong>项目名称：</strong>61.5公里道路铺设</li>
+                                    <li><strong>资金来源：</strong>非洲开发银行贷款及赠款</li>
+                                    <li><strong>项目地点：</strong>River Gee县和Grand Gedeh县</li>
+                                    <li><strong>合同期限：</strong>48个月 (36个月施工+12个月缺陷责任期)</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>文件编制依据</h4>
+                                <ul>
+                                    <li>基于非洲开发银行 (AfDB) 的《采购框架》及标准招标文件 (SBD)</li>
+                                    <li>适用于无资格预审的国际公开竞标 (OCBI)</li>
+                                    <li>采用"最经济有利投标 (MEAT)"评估标准</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-section">
+                        <h3><i class="fas fa-clipboard-list"></i> 1.2 投标程序 (Part 1: Bidding Procedures)</h3>
+                        <div class="content-grid">
+                            <div class="info-card">
+                                <h4>投标人须知 (Section I)</h4>
+                                <ul>
+                                    <li>投标人资格要求 (国籍、无利益冲突等)</li>
+                                    <li>投标文件组成：投标函、工程量清单、投标保证金等</li>
+                                    <li>投标有效期：120天</li>
+                                    <li>投标保证金：100万美元</li>
+                                    <li>投标截止时间：2025年7月31日15:00</li>
+                                    <li>开标流程：现场公开开标</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>投标数据表 (Section II)</h4>
+                                <ul>
+                                    <li>补充投标人须知的具体信息</li>
+                                    <li>投标函编号、雇主地址等</li>
+                                    <li>投标人需提交的额外文件：近3年项目业绩证明、ES行为准则等</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>评估与资格标准 (Section III)</h4>
+                                <ul>
+                                    <li><strong>财务资格：</strong>最低流动资金2500万美元，近5年平均年营业额3600万美元</li>
+                                    <li><strong>技术经验：</strong>近5年完成至少2个单项≥5000万美元的类似道路项目</li>
+                                    <li><strong>关键人员资质：</strong>施工经理需10年道路项目经验，环境专家需8年环境管理经验</li>
+                                    <li><strong>设备要求：</strong>推土机、沥青拌合站等具体型号及数量</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="content-grid" style="margin-top: 20px;">
+                            <div class="info-card">
+                                <h4>投标表格 (Section IV)</h4>
+                                <ul>
+                                    <li>投标函、价格调整表、工程量清单</li>
+                                    <li>资格证明文件 (财务报表、经验证明等)</li>
+                                    <li>投标保证金格式</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>合格国家 (Section V)</h4>
+                                <ul>
+                                    <li>投标人及材料/设备来源需为非洲开发银行成员国</li>
+                                    <li>排除受联合国制裁或利比里亚法律禁止的国家</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>欺诈与腐败 (Section VI)</h4>
+                                <ul>
+                                    <li>禁止腐败、欺诈、串通等行为</li>
+                                    <li>违反者将被取消资格并纳入非洲开发银行制裁名单</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-section">
+                        <h3><i class="fas fa-road"></i> 1.3 工程要求 (Part 2: Works' Requirements)</h3>
+                        <div class="content-grid">
+                            <div class="info-card">
+                                <h4>工程范围</h4>
+                                <ul>
+                                    <li>61.5公里道路铺设</li>
+                                    <li>场地清理、土方工程 (挖方84万m³+填方98万m³)</li>
+                                    <li>排水结构 (140个涵洞+1座30m桥梁)</li>
+                                    <li>路面结构 (gravel基层200mm+沥青层100mm)</li>
+                                    <li>道路标识等配套设施</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>技术规范</h4>
+                                <ul>
+                                    <li>材料标准 (如沥青层厚度50mm、混凝土强度C30/20)</li>
+                                    <li>施工工艺 (碾压强度、排水坡度)</li>
+                                    <li>质量验收标准 (符合ASTM、BS等国际标准)</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>环境与社会 (ES) 要求</h4>
+                                <ul>
+                                    <li>需制定ES管理计划</li>
+                                    <li>污染控制 (粉尘、废水排放限值)</li>
+                                    <li>性别平等 (女性员工比例、反性别暴力培训)</li>
+                                    <li>劳工保护 (100%本地非技术工、60%本地半技术工)</li>
+                                    <li>预防性剥削与骚扰 (SEAH) 措施</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-section">
+                        <h3><i class="fas fa-file-contract"></i> 1.4 合同条件与格式 (Part 3)</h3>
+                        <div class="content-grid">
+                            <div class="info-card">
+                                <h4>通用条件 (Section VIII)</h4>
+                                <ul>
+                                    <li>基于FIDIC《施工合同条件 (2017版)》</li>
+                                    <li>规定双方基本权利义务</li>
+                                    <li>工期、付款、验收、缺陷责任等条款</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>专用条件 (Section IX)</h4>
+                                <ul>
+                                    <li>合同工期：36个月施工</li>
+                                    <li>付款周期：56天</li>
+                                    <li>缺陷责任期：12个月</li>
+                                    <li>争议解决：先由DAAB调解，再提交加纳阿克拉仲裁</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>合同格式 (Section X)</h4>
+                                <ul>
+                                    <li>中标意向通知</li>
+                                    <li>合同协议</li>
+                                    <li>履约保证金格式</li>
+                                    <li>预付款担保格式</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 编写注意部分 -->
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-exclamation-circle"></i> 2 编写注意</h2>
+                </div>
+                <div class="section-body">
+                    <div class="requirements-grid">
+                        <div class="requirement-card">
+                            <h4><i class="fas fa-check-double"></i> 2.1 信息准确性与一致性</h4>
+                            <ul>
+                                <li>核心数据需反复核对 (项目长度61.5km、投标截止时间、保证金金额100万美元)</li>
+                                <li>工期在不同章节统一为"48个月"，避免歧义</li>
+                                <li>资金来源明确具体贷款/赠款编号 (如ADF Loan No: 2100150042947)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirement-card">
+                            <h4><i class="fas fa-calculator"></i> 2.2 资格标准的"可操作性"</h4>
+                            <ul>
+                                <li>财务要求具体可验证 (如"近5年平均年营业额≥3600万美元")</li>
+                                <li>明确计算方式："近5年已完成合同的certified payments总和÷5"</li>
+                                <li>关键人员资质需量化 (如"施工经理需10年总经验+8年管理经验")</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirement-card">
+                            <h4><i class="fas fa-leaf"></i> 2.3 ES条款的"可执行性"</h4>
+                            <ul>
+                                <li>避免空泛要求，明确具体措施和验收标准</li>
+                                <li>性别平等需规定"女性员工占比≥30%"、"每季度开展反性别暴力培训"</li>
+                                <li>关联当地法律 (如利比里亚《2015年体面工作法》)</li>
+                                <li>本地劳工比例需明确"非技术工100%本地化"的具体范围</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirement-card">
+                            <h4><i class="fas fa-shield-alt"></i> 2.4 风险控制与责任划分</h4>
+                            <ul>
+                                <li>明确"缺陷责任期"责任 (如"施工缺陷修复费用由承包商承担")</li>
+                                <li>投标保证金的退还条件 (如"未中标者在合同签订后28天内退还")</li>
+                                <li>预设"异常低价投标"处理规则 (如"低于平均报价20%的投标需提供成本分析")</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirement-card">
+                            <h4><i class="fas fa-project-diagram"></i> 2.5 结构清晰性与合规性</h4>
+                            <ul>
+                                <li>按"投标流程→工程要求→合同条件"逻辑分层</li>
+                                <li>关键条款突出标注 (表格、加粗)</li>
+                                <li>完全符合非洲开发银行《采购框架》</li>
+                                <li>"合格国家"清单与银行规定一致</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirement-card">
+                            <h4><i class="fas fa-clock"></i> 2.6 时间节点的明确性</h4>
+                            <ul>
+                                <li>关键时间精确到"日期+时间+时区" (如"2025年7月31日15:00利比里亚时间")</li>
+                                <li>预留合理缓冲期 (如"投标截止后1小时内开标")</li>
+                                <li>合同签订期限明确标注</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="core-logic-box">
+                        <h3><i class="fas fa-sitemap"></i> 核心逻辑</h3>
+                        <p>文档以"规范投标流程、明确双方权责"为核心，从<strong>招标要求→投标评估→工程标准→合同执行</strong>全流程界定规则，重点强调财务资质、技术能力、环境与社会合规性，确保项目通过透明、合规的竞标选定承包商，最终实现61.5公里道路的高质量铺设。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-logos">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <p>利比里亚公共工程部</p>
+                </div>
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <p>非洲开发银行</p>
+                </div>
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <p>马诺河联盟</p>
+                </div>
+            </div>
+            
+            <div class="footer-text">
+                <p>© 2025 利比里亚公共工程部 | 马诺河联盟道路发展与运输便利化计划</p>
+                <p>本招标文件依据非洲开发银行《采购框架》编制，最终解释权归利比里亚公共工程部所有</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
